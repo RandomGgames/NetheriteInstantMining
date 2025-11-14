@@ -1,0 +1,41 @@
+{
+    "condition": "minecraft:all_of",
+    "terms": [
+        {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "equipment": {
+                    "mainhand": {
+                        "items": "minecraft:netherite_pickaxe"
+                    }
+                }
+            }
+        },
+        {
+            "condition": "minecraft:inverted",
+            "term": {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                    "equipment": {
+                        "mainhand": {
+                            "items": "minecraft:netherite_pickaxe",
+                            "components": {
+                                "minecraft:tool": {
+                                    "rules": [
+                                        {
+                                            "blocks": "#minecraft:mineable/pickaxe",
+                                            "speed": 39,
+                                            "correct_for_drops": true
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}
