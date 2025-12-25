@@ -4,7 +4,7 @@ Mining deepslate even with an efficiency 5 haste 2 netherite pickaxe is a challe
 
 This data pack modifies a held netherite pickaxe or axe so that if it is enchanted with efficiency 5 and the player has haste 2, deepslate and logs are mined instantly!
 
-Note: This change is Perminant! The only way to undo this is to modofy the items components with a command.
+Note: This change is perminant! The only way to undo this is to modify the items components with a command. First, disable the datapack, then while holding any modified tools, run the following commands.
 
 Pickaxe:
 ```
