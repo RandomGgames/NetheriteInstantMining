@@ -42,7 +42,7 @@ class ScriptSettings:
 @dataclass
 class LogSettings:
     mode: typing.Literal["per_run", "latest", "per_day", "single_file", "console_only"] = "latest"
-    folder: Path = Path("")
+    folder: Path = Path("Logs")
     console_level: int = logging.DEBUG
     file_level: int = logging.DEBUG
     date_format: str = "%Y-%m-%dT%H:%M:%S"
