@@ -1,22 +1,30 @@
 # Netherite Instant Mining
 
-Mining deepslate even with an efficiency 5 haste 2 netherite pickaxe is a challenge... It should be mined instantly with maxed out gear!
+### What is it?
+Even with an enchanted Efficiency 5 pickaxe or axe and Haste 2, you still can't instantly mine deepslate or logs.
 
-This data pack modifies a held netherite pickaxe or axe so that if it is enchanted with efficiency 5 and the player has haste 2, deepslate and logs are mined instantly!
+This data pack adds a way to further enchant your netherite pickaxes and axes with high enough efficiency to instantly mine deepslate and logs when combined with haste 2.
 
-Note: This change is perminant! The only way to undo this is to modify the items components with a command. First, disable the datapack, then while holding any modified tools, run the following commands.
+### How it works
 
-Pickaxe:
+Take a netherite pickaxe or axe enchanted with Efficiency 5 and drop it on top of a smithing table (as an item). Drop an additional Efficiency 5 enchanted book nearby, and the pickaxe will be upgraded to Efficiency 8! Axes will be upgraded to Efficiency 6! The book will be consumed on use, and all other enchantments on the book will be ignored. Both of these upgrades allow for instant mining of deepslate and logs.
+
+## IMPORTANT NOTE!
+This change is *permanent*! Once an item is upgraded, there is no way to undo the enchantment in survival without OP.
+
+### How to downgrade items back to Efficiency 5
+For OP players or server owners: If you want to undo the changes this data pack makes to tools, each item must be changed individually, or you can use external tools to find all tools in a data file with efficiency enchantments higher than 5 and set them to 5.
+
+The following command sets the item held in your main hand to Efficiency 5:
+
 ```
-/item modify entity @p weapon.mainhand {function:"minecraft:set_components",components:{"minecraft:tool":{rules:[{blocks:"#minecraft:mineable/pickaxe",speed:9,correct_for_drops:true},{blocks:"#minecraft:incorrect_for_netherite_tool",correct_for_drops:false}]}}}
+/item modify entity @s weapon.mainhand {"function":"minecraft:set_enchantments","enchantments":{"minecraft:efficiency":5}}
 ```
 
-Axe:
+Included in the datapack is a function that runs this same command for easy access:
+
 ```
-/item modify entity @p weapon.mainhand {function:"minecraft:set_components",components:{"minecraft:tool":{rules:[{blocks:"#minecraft:mineable/axe",speed:9,correct_for_drops:true},{blocks:"#minecraft:incorrect_for_netherite_tool",correct_for_drops:false}]}}}
+/function netheriteinstantmining:set_mainhand_tool_back_efficiency_5
 ```
 
-## Features
-- Modifies a netherite pickaxe or axe immediatly when held.
-- The modification persists even if the data pack is uninstalled or the item is modified.
-- The modification is is done using components.
+Note: This command sets the efficiency level to 5 for ANY item in your main hand. Make sure to run it while holding the correct item!

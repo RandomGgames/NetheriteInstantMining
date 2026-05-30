@@ -1,3 +1,3 @@
-execute as @a[nbt={SelectedItem:{id:"minecraft:netherite_pickaxe"}},nbt=!{SelectedItem:{components:{"minecraft:tool":{rules:[{speed:39f}]}}}}] run function netheriteinstantmining:netherite_pickaxe
+execute as @e[type=item,nbt={Item:{id:"minecraft:netherite_pickaxe",components:{"minecraft:enchantments":{"minecraft:efficiency":5}}}}] at @s if block ~ ~-1 ~ minecraft:smithing_table if entity @e[distance=...75,type=item,nbt={Item:{id:"minecraft:enchanted_book",components:{"minecraft:stored_enchantments":{"minecraft:efficiency":5}}}}] run function netheriteinstantmining:upgrade_netherite_pickaxe
 
-execute as @a[nbt={SelectedItem:{id:"minecraft:netherite_axe"}},nbt=!{SelectedItem:{components:{"minecraft:tool":{rules:[{speed:20f}]}}}}] run function netheriteinstantmining:netherite_axe
+execute as @e[type=item,nbt={Item:{id:"minecraft:netherite_axe",components:{"minecraft:enchantments":{"minecraft:efficiency":5}}}}] at @s if block ~ ~-1 ~ minecraft:smithing_table if entity @e[distance=...75,type=item,nbt={Item:{id:"minecraft:enchanted_book",components:{"minecraft:stored_enchantments":{"minecraft:efficiency":5}}}}] run function netheriteinstantmining:upgrade_netherite_axe
